@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIファームメガネ | 農業のミライがここにある</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #4A7c59;
+            --accent-green: #00FF41;
+            --bg-dark: #000000;
+            --text-light: #ffffff;
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container { max-width: 1100px; width: 100%; z-index: 2; }
+
+        .bg-image {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        .badge {
+            position: absolute;
+            top: 30px; right: 30px;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            z-index: 10;
+            border-radius: 4px;
+        }
+
+        h1 { font-size: 3.5rem; margin: 20px 0; letter-spacing: 0.1em; line-height: 1.2; text-align: center; }
+        .hero-text { text-align: center; }
+
+        #vision { padding: 0; background: #fff; color: #333; }
+        .flex-row { display: flex; width: 100%; min-height: 100vh; flex-wrap: wrap; }
+        .vision-content { flex: 1; padding: 80px; display: flex; flex-direction: column; justify-content: center; min-width: 320px; }
+        .vision-image { flex: 1; background-size: cover; background-position: center; min-height: 50vh; min-width: 320px; }
+
+        .service-card {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            padding: 50px;
+            border-radius: 30px;
+            backdrop-filter: blur(15px);
+            flex-wrap: wrap;
+        }
+        .service-text { flex: 1; min-width: 300px; }
+        .service-visual { flex: 1; min-width: 300px; border-radius: 15px; overflow: hidden; border: 2px solid var(--accent-green); }
+        .service-visual img { width: 100%; display: block; height: auto; }
+        .num { font-size: 2.5rem; font-weight: bold; color: var(--accent-green); }
+
+        .black-panel {
+            background: rgba(0,0,0,0.85);
+            padding: 60px;
+            border-left: 5px solid #fff;
+            max-width: 650px;
+        }
+
+        footer {
+            background: #fff;
+            color: #333;
+            padding: 80px 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .footer-logo { font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; letter-spacing: 0.2em; }
+        .btn {
+            background: #4A7c59;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:after { content: ' >'; margin-left: 10px; font-size: 1.2rem; }
+        .btn:hover { background: #3a6347; transform: translateY(-2px); }
+
+        .fade { opacity: 0; transform: translateY(40px); transition: 1.2s ease; }
+        .fade.show { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <section id="hero">
+        <div class="badge">近日発売予定</div>
+        <div class="bg-image" style="background-image: url('1.png');"></div>
+        <div class="overlay"></div>
+        <div class="container hero-text fade">
+            <p>収穫の最適解を映し出す。次世代農業デバイス「AIファームグラス」</p>
+            <h1>農業のミライが<br>ここにある</h1>
+            <p>AIファームグラスで、プロの眼が導く最適解を体感</p>
+        </div>
+    </section>
+
+    <section id="vision">
+        <div class="flex-row">
+            <div class="vision-content fade">
+                <h2 style="border-left: 3px solid #ddd; padding-left: 20px; font-size: 1.2rem; color: #666;">ビジョン</h2>
+                <h3 style="font-size: 2.5rem; margin-top: 10px;">熟練の「眼」を<br>すべての農家へ</h3>
+                <p>かつて、農業の知恵は長い年月をかけて体に刻むものでした。私たちはその「経験」をテクノロジーで解放します。初めて土に触れる人も、長年向き合ってきた人も、同じ最適解を共有できる。技術が人に寄り添い、誰もが自信を持って実りを迎えられる。そんな、知識の格差がない農業のカタチを目指しています。</p>
+            </div>
+            <div class="vision-image" style="background-image: url('2.png');"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="service-card fade">
+                <div class="service-text">
+                    <div class="num">01.</div>
+                    <h2 style="font-size: 2rem;">ライブ・スキャン</h2>
+                    <p><strong>「見逃さない」ための、高精度センサー</strong></p>
+                    <p>グラスをかけて圃場を歩くだけで、AIが作物の色ツヤ、葉の形状、わずかな変色を瞬時に解析。病害虫の兆候や栄養不足を、まるで道路標識のように視界にハイライト表示します。</p>
+                    <p style="color: var(--accent-green);"><small>メリット：早期発見による減農薬と、被害の最小化を実現</small></p>
+                </div>
+                <div class="service-visual">
+                    <img src="3.png" alt="ライブ・スキャン">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="service-card fade" style="flex-direction: row-reverse;">
+                <div class="service-text">
+                    <div class="num">02.</div>
+                    <h2 style="font-size: 2rem;">ベスト・ピック</h2>
+                    <p><strong>「迷わない」ための、収穫適期ナビ。</strong></p>
+                    <p>熟練の農家でも迷う「一番美味しいタイミング」をAIが数値化。糖度予測やサイズ計測を非接触で行い、収穫すべき個体をAR（拡張現実）でガイドします。</p>
+                    <p style="color: var(--accent-green);"><small>メリット：品質の均一化と、作業スピードの劇的な向上</small></p>
+                </div>
+                <div class="service-visual">
+                    <img src="4.png" alt="ベスト・ピック">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="service-card fade">
+                <div class="service-text">
+                    <div class="num">03.</div>
+                    <h2 style="font-size: 2rem;">セレクト・ガード</h2>
+                    <p><strong>「誤抜ゼロ」の、安全装置</strong></p>
+                    <p>収穫対象ではない個体や、まだ育てるべき若株に手が伸びた瞬間、グラスが視覚と音で警告を発します。</p>
+                    <p style="color: var(--accent-green);"><small>メリット：作業ストレスの解消と、迷いのないスピードアップ</small></p>
+                </div>
+                <div class="service-visual">
+                    <img src="5.png" alt="セレクト・ガード">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="bg-image" style="background-image: url('6.png');"></div>
+        <div class="overlay" style="background: rgba(0,0,0,0.65);"></div>
+        <div class="container fade">
+            <div class="black-panel">
+                <p style="letter-spacing: 2px; color: #ccc;"><small>Why Choose Us</small></p>
+                <h2 style="font-size: 2.2rem; margin-top: 10px;">農業の「常識」を<br>テクノロジーで書き換える</h2>
+                <p>AIファームグラスが選ばれる理由は、汎用デバイスの転用ではなく、過酷な農場環境での「即時判断」に特化した独自の設計思想にあります。通信環境に左右されない高速エッジAIが、熟練農家の視点と判断基準をリアルタイムに同期。単なる道具を超え、まるで自動運転のように最適な実りへとあなたをナビゲートします。</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #000;">
+        <div class="container fade">
+            <div style="display:flex; gap: 40px; flex-wrap: wrap; align-items: center;">
+                <div style="flex:1.2; min-width: 300px;">
+                    <p style="color: #666; border-left: 2px solid #444; padding-left: 15px;"><small>Conclusion:<br>AIファームメガネが描く農業の未来</small></p>
+                    <h2 style="font-size: 1.8rem; margin-top: 30px;">AIファームメガネは,単なる視覚支援ツールではありません。</h2>
+                    <p>それは、複雑な農場経営を「自動運転」のようにシンプルに変える、次世代のスタンダードです。</p>
+                </div>
+                <div style="flex:1; min-width: 300px; border: 1px solid rgba(255,255,255,0.3); padding: 40px; border-radius: 20px; background: rgba(255,255,255,0.02);">
+                    <h3 style="margin-top:0; color: #fff;">3つの革新機能</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 25px;"><strong>1. ライブ・スキャン：</strong><br>病害虫や異常を0.1秒で自動検知。</li>
+                        <li style="margin-bottom: 25px;"><strong>2. ベスト・ピック：</strong><br>収穫適期を逃さず、品質を均一化。</li>
+                        <li><strong>3. セレクト・ガード：</strong><br>誤抜を警告し、未経験者を即戦力へ。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="width: 100%;"><div class="footer-logo">AIファームメガネ</div></div>
+        <div style="min-width: 200px;">
+            <p style="margin-bottom: 20px;">テクノロジー</p>
+            <p style="margin-bottom: 20px;">会社案内</p>
+            <p>キャリア</p>
+        </div>
+        <div style="min-width: 250px;">
+            <p>TEL : 0120-025-215</p>
+            <p>Email : Alfarmmegane@gmail.co.jp</p>
+            <p style="font-size: 0.9rem; margin-top: 30px;">〒260-0045<br>千葉県千葉市中央区弁天1-5-1<br>オーパスビルディング2階</p>
+        </div>
+        <div style="min-width: 250px;">
+            <p><strong>販売ページ</strong></p>
+            <p style="font-size: 0.9rem; margin-bottom: 30px; color: #666;">クリックしていただくと AIファームメガネ の<br>購入ページへ移動します。</p>
+            <a href="#" class="btn">販売ページはこちら</a>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
